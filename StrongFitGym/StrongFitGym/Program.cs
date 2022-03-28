@@ -5,12 +5,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<Contexto>(
-    options => options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=StrongFitGym;Integrated Security=True;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
-);
+//builder.Services.AddDbContext<Contexto>(
+//    options => options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=StrongFitGym;Integrated Security=True;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+//);
 //builder.Services.AddDbContext<Contexto>(
 //    options => options.UseSqlServer("Data Source=DESKTOP-7FLN8LU\\MSSQLSERVER01;Initial Catalog=StrongFitGym;Integrated Security=True;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
 //);
+builder.Services.AddDbContext<Contexto>(
+    options => options.UseSqlServer("Data Source=LAPTOP-62PGI4RB;Initial Catalog=StrongFitGym;Integrated Security=True;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+);
+
 
 var app = builder.Build();
 
